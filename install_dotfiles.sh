@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Symlink all files in the dotfiles directory to the home directory
 
 DOTFILES_DIR="$HOME/dotfiles"
@@ -15,6 +13,6 @@ for file in "$DOTFILES_DIR"/.*; do
     
     target="$HOME/$basename"
     
-    ln -s "$file" "$target"
-    echo "Created symlink for $basename"
+    ln -sf "$file" "$target"
+    echo "Added symlink in $HOME for $basename"
 done
